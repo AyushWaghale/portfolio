@@ -216,8 +216,7 @@ section.about-section {
   color: var(--dark-primary);
 }
 
-/* Projects Section */
-section.projects-section {
+/* Projects Section */section.projects-section {
   background-color: var(--dark-primary);
   color: #fff;
   padding: 50px 120px;
@@ -234,11 +233,13 @@ section.projects-section {
 
 .projects-cards {
   display: flex;
+  flex-wrap: wrap; /* Allows items to wrap into new rows */
+  justify-content: space-between; /* Distributes items evenly with space between */
 }
 
 .projects-card-box {
-  width: 33.33%;
-  margin: 35px 10px;
+  width: 30%; /* Ensure 3 items fit in a row with space in between */
+  margin: 15px 0; /* Adjust margin for spacing between rows */
   padding: 33px;
   background-color: var(--dark-secondary);
   border-radius: 5px;

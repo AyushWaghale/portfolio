@@ -227,12 +227,12 @@ section.projects-section {
 }
 
 .projects-cards {
-  display: flex;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* 3 projects per row */
+  gap: 35px; /* Space between the cards */
 }
 
 .projects-card-box {
-  width: 33.33%;
-  margin: 35px 10px;
   padding: 33px;
   background-color: #22282f;
   border-radius: 5px;
@@ -284,6 +284,20 @@ section.projects-section {
   font-size: 13px;
   color: #fff;
 }
+
+/* Ensure responsive layout for smaller screens */
+@media (max-width: 1024px) {
+  .projects-cards {
+    grid-template-columns: repeat(2, 1fr); /* 2 projects per row on medium screens */
+  }
+}
+
+@media (max-width: 768px) {
+  .projects-cards {
+    grid-template-columns: 1fr; /* 1 project per row on small screens */
+  }
+}
+
 
 /* Contact Section */
 section.contact-section {
